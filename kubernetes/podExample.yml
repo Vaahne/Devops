@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-test-pod
+spec: 
+  containers:
+    - name: my-devops
+      image: devopsinfra/docker-terragrunt
+      ports:
+        - containerPort: 8080

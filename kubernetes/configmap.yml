@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-config
+  namespace: my-ns
+data:
+  MY_DRIVER_URL: value1
+  MY_DATABASE_NAME: value2

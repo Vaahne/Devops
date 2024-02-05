@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-maven-pod
+spec:
+  containers:
+    - name: my-web-app
+      image: javabyraghu/maven-web-app
+      ports:
+        - containerPort: 8080
