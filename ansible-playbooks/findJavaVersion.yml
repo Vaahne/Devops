@@ -1,0 +1,12 @@
+---
+  - name: find Java version
+    hosts: all
+    become: true
+    gather_facts: true
+    tasks:
+      - name: java version
+        shell: java --version
+        register: output
+      - name: display output
+        debug: 
+          var: output.stdout
