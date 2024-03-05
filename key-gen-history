@@ -1,0 +1,65 @@
+    1  clear
+    2  sudo yum install java-11-amazon-corretto
+    3  sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.86/bin/apache-tomcat-9.0.86.tar.gz -P /tmp/
+    4  sudo tar xvzf /tmp/apache-tomcat-9.0.86.tar.gz -C /opt/
+    5  sudo mv /opt/apache-tomcat-9.0.86 /opt/tomcat
+    6  sudo find /opt/tomcat/ -name 'server*'
+    7  sudo useradd tomcagt
+    8  sudo useradd tomcat
+    9   sudo chown -R tomcat:tomcat /opt/tomcat
+   10   sudo sh -c 'chmod +x /opt/tomcat/bin/*.sh'
+   11  sudo nano /etc/systemd/system/tomcat.service
+   12  sudo nano /opt/tomcat/conf/tomcat-users.xml
+   13  sudo nano /opt/tomcat/webapps/manager/META-INF/context.xml
+   14  sudo nano /opt/tomcat/webapps/host-manager/META-INF/context.xml
+   15  sudo systemctl daemon-reload
+   16  sudo systemctl enable tomcat
+   17  sudo systemctl start tomcat
+   18  sudo systemctl status tomcat
+   19  clear
+   20  ls /opt/tomcat
+   21  ls /opt/tomcat/conf
+   22  sudo ls /opt/tomcat/conf
+   23  sudo find -name 'server*'
+   24  sudo find /opt/tomcat -name 'server*'
+   25  sudo nano /opt/tomcat/conf/server.xml
+   26  ls /opt/tomcat/webapps
+   27  sudo ls /opt/tomcat/webapps
+   28  clear
+   29  sudo su -
+   30  sudo chmod 700 ~/.ssh
+   31  sudo chmod 600 ~/.ssh/authorized_keys 
+   32  ls -l
+   33  sudo ls -l
+   34  sudo ls -l ~/.ssh
+   35  sudo chown -R ec2-user:ec2-user ~/.ssh
+   36  sudo ls -l ~/.ssh
+   37  sudo systemctl restart sshd 
+   38  sudo vi /etc/ssh/sshd_config
+   39  sudo systemctl restart sshd 
+   40  clear
+   41  history
+   42  cd /root/.ssh/
+   43  sudo cd /root/.ssh/
+   44  ls 
+   45  ls -la
+   46  pwd
+   47  sudo cd /.ssh
+   48  sudo cd .ssh
+   49  sudo cd ~/.ssh
+   50  ls
+   51  pwd
+   52  sudo su -
+   53  cd .ssh
+   54  ls
+   55  nano authorized_keys 
+   56  sudo systemctl restart sshd
+   57  sh 'sudo scp -o StrictHostKeyChecking=no tart/01-maven-web-app.war ec2-user@107.21.57.242:/opt/tomcat/webapps'
+   58  clear
+   59  sudo scp -o StrictHostKeyChecking=no target/01-maven-web-app.war ec2-user@107.21.57.242:/opt/tomcat/webapps
+   60  ssh ec2-user@3.80.219.156
+   61  ssh ec2-user@172.31.19.43
+   62  clear
+   63  history
+   64  pwd
+   65  history >> history
